@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="card.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+
+<div class="Preview">
+  <div class="fond"></div>
+  <img class="logo" src="images/card-logo.svg" alt="" aria-hidden="true">
+  <img class="front" src="images/bg-card-front.png" alt="" aria-hidden="true">
+  <img class="back" src="images/bg-card-back.png" alt="" aria-hidden="true">
+
+  <p class="previewNumber"> 0000 0000 0000 0000 </p>
+  <p class="previewName"> Jane Appleseed</p>
+  <p class="previewDate"> 00 </p>
+  <p class="sep">/</p>
+  <p class="previewDate2">00</p>
+  <p class="previewCvc"> 000 </p>
+</div>
+
+<form id="information">
+  <label for="name">Cardholder Name</label>
+  <input type="text" id="name" name="name" required maxlength="20"  placeholder="e.g. Jane Appleseed" onkeydown="validationName()"> 
+  <span id="nameError"></span>
+
+  <label for="number">Card Number</label>
+  <input type="text" id="number" name="number" required maxlength="19" size="" placeholder="e.g. 1234 5678 9123 0000" onkeydown="validationNumber()">
+  <span id="numberError"></span> 
+
+  <label class= "dateLabel" for="month">Exp. Date (MM/YY)</label>
+  <input type="text" id="month" name="month" required maxlength="2" size="" placeholder="MM" onkeydown="validationMonth()">
+  <input type="text" id="year" name="year" required maxlength="2" size="" placeholder="YY" onkeydown="validationYear()">
+  <span id="dateError"></span>
+
+  <label class="cvcLabel" for="cvc">CVC</label>
+  <input type="text" id="cvc" name="cvc" required maxlength="3" size="" placeholder="ee.g. 123" onkeydown="validationCvc()">
+  <span id="cvcError"></span>
+
+  <button type="submit" id="confirm"> Confirm </button>
+</form>
+
+
+  <!-- Completed state start -->
+<div class="thank hidden">
+
+  <img class="logoValid" src="images/icon-complete.svg" alt="" aria-hidden="true">
+  <h1> Thank you! </h1>
+  <p> We've added your card details</p>
+
+ <button type="submit" id="continue"> Continue </button>
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Demyttenaere Maxime</a>.
+  </div>
+  <script src="card.js"></script>
+</body>
+</html>
