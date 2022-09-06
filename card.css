@@ -1,0 +1,447 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, p, img {
+
+  margin: 0;
+}
+
+body {
+
+    min-width: 100%;
+    min-height: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+.fond {
+
+    position: absolute;
+    background: url(bg-main-mobile.png);
+    width: 375px;
+    height: 240px;
+}
+
+.front, .back {
+
+    width: 285px;
+    height: 160px;
+}
+
+.preview {
+
+    display: flex;
+}
+
+.front{
+
+    position: absolute;
+    z-index: 100;
+    margin-left: 20px;
+    margin-top: 120px;
+}
+
+.back {
+
+    position: relative;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.logo {
+    
+    height: 30px;
+    width: 55px;
+    position: absolute;
+    z-index: 3000;
+    margin-top: 140px;
+    margin-left: 40px;
+}
+
+.previewNumber, .previewName, .previewDate, .previewDate2, .previewCvc, .sep {
+
+    position: absolute;
+    z-index: 100;
+    color: white;
+}
+
+.previewNumber {
+
+    margin-top: 10px;
+    margin-left: 40px;
+    letter-spacing: 2px;
+}
+
+.previewName {
+
+    margin-left: 40px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.previewDate {
+
+    margin-left: 250px;
+    font-size: 11px;
+    margin-top: 50px;
+    letter-spacing: 1px;
+}
+
+.previewDate2 {
+
+    margin-left: 275px;
+    font-size: 11px;
+    margin-top: 50px;
+    letter-spacing: 1px;
+}
+
+.sep {
+
+    margin-left: 268px;
+    font-size: 11px;
+    margin-top: 49px;
+    letter-spacing: 1px;
+}
+
+.previewCvc {
+
+    margin-left: 300px;
+    margin-top: -93px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+#information {
+
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between; 
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+#name, #number  {
+
+    width: 325px;
+    height: 45px;
+    margin-left: 20px;
+    border-radius: 8px;
+    border: 1px  solid hsl(270, 3%, 87%);
+}
+
+#month, #year {
+
+    position: absolute;
+    width: 70px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px  solid hsl(270, 3%, 87%);
+}
+
+#year {
+
+    margin-top: 240px;
+    margin-left: 100px;
+}
+
+#cvc {
+
+    position: absolute;
+    width: 165px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px  solid hsl(270, 3%, 87%);
+    margin-top: 240px;
+    margin-left: 190px;
+}
+
+.cvcLabel {
+
+    position: absolute;
+    margin-top: 214px;
+    margin-left: 190px;
+}
+
+.dateLabel {
+
+    position: absolute;
+    margin-top: 214px;
+    margin-left: 20px;
+}
+
+#month {
+
+    margin-left: 20px;
+    margin-top: 240px;
+}
+
+label {
+
+    margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+::placeholder {
+
+    color:hsl(270, 3%, 87%);
+}
+
+
+.hidden {
+    
+    display: none;
+}
+
+#confirm {
+
+    margin-top: 130px;
+    width: 335px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 8px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-size: 17px;
+    border: none;
+}
+
+.thank {
+
+    margin-top: 200px;
+}
+
+.logoValid {
+
+    margin-left:160px;
+    margin-top: -40px;
+}
+
+h1 {
+
+    margin-top: 30px;
+    text-transform: uppercase;
+    margin-left: 100px;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.thank p {
+
+    margin-left: 60px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    color: hsl(279, 6%, 55%);
+    font-size: 16px;
+}
+
+#continue {
+
+    margin-top: 80px;
+    width: 335px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 8px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    font-size: 17px;
+    border: none;
+}
+
+#nameError, #numberError, #dateError, #cvcError {
+
+    font-size: 8px;
+    color: hsl(0, 100%, 66%);
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#dateError {
+
+    position:absolute;
+    margin-top: 290px;
+}
+
+#cvcError {
+
+    position:absolute;
+    margin-top: 290px;
+    margin-left: 200px;
+}
+
+.attribution { 
+
+    margin-top: 50px;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width:1000px) {
+
+    .fond {
+
+      background: url(bg-main-desktop.png);
+      width: 483px;
+      height: 900px;
+    }
+
+    .front {
+
+        width: 445px;
+        height: 245px;
+        margin-left: 165px;
+        margin-top: 187px;
+    }
+
+    .back {
+
+        width: 445px;
+        height: 245px;
+        margin-left: 258px;
+        margin-top: 470px;
+    }
+
+    .logo {
+
+        height: 45px;
+        width: 82.5px;
+        margin-left: 200px;
+        margin-top: 215px;
+    }
+
+    .previewNumber {
+
+        margin-top: -410px;
+        margin-left: 200px;
+        font-size: 28px;
+        letter-spacing: 3px;
+    } 
+    
+    .previewName {
+
+        margin-top: -340px;
+        margin-left: 200px;
+        font-size: 15px;
+    } 
+    
+    .previewDate {
+
+        margin-top: -340px;
+        margin-left: 530px;
+        font-size: 15px;
+    } 
+    
+    .previewDate2 {
+
+        margin-top: -340px;
+        margin-left: 560px;
+        font-size: 15px;
+    } 
+    
+    .previewCvc {
+
+        margin-top: -140px;
+        margin-left: 615px;
+        font-size: 15px;
+        
+    } 
+    
+    .sep {
+
+        margin-top: -340px;
+        margin-left: 552px;
+        font-size: 15px;
+    }
+
+    #information {
+
+        margin-left: 800px;
+        margin-top: -470px;
+        font-size: 15px;
+    }
+
+    #name, #number {
+
+        width: 380px;
+    }
+    
+    #month, #year {
+
+        width: 80px;
+    }
+
+    #year {
+
+        margin-left: 110px;
+    }
+
+    #cvc {
+
+        width: 190px;
+        margin-left: 210px;
+    }
+
+    #confirm {
+
+        width: 380px;
+        margin-top: 140px;
+    }
+
+    .cvcLabel {
+
+        margin-left: 210px;
+    }
+
+    #cvcError {
+
+        margin-left: 215px;
+    }
+
+    #nameError, #numberError, #dateError, #cvcError {
+
+        font-size: 9px;
+    }
+
+    .attribution {
+
+        margin-left: 590px;
+        margin-top: 150px;
+    }
+
+    .thank {
+
+        margin-left: 800px;
+        margin-top: -380px;  
+    }
+
+    .thank p {
+
+        font-size: 18px;
+    }
+
+    #continue {
+
+        width: 380px;
+        margin-top: 50px;
+    }
+
+    h1 {
+
+        margin-top: 60px;
+        font-size: 32px;
+    }
+    
+}
